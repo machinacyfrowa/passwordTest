@@ -111,6 +111,24 @@ function validate() {
         charsLi.innerHTML = "Hasło nie zawiera znaków specjalnych";
         charsLi.className = "red";
     }
+    let sum = 0;
+    if(charsFound)
+        sum++;
+    if(capitalCharsFound)
+        sum++;
+    if(digitsFound)
+        sum++;
+    if(specialsFound)
+        sum++;
+    let p = document.getElementById("requirements");
+    if(sum >= 3) {
+        //hasło spełnia wymogi ustawowe
+        p.innerHTML = "Hasło spełnia wymogi ustawowe";
+        p.className = "green";
+    } else {
+        p.innerHTML = "Hasło nie spełnia wymogów ustawowych";
+        p.className = "red";
+    }
 }
 
 //funkcja anonimowa (funkcja strzałkowa) służy do wstawiania 
@@ -120,4 +138,5 @@ function validate() {
 window.addEventListener("load", () => {
     document.getElementById("passwordInput")
                 .addEventListener("input", validate);
+    validate();
 })
