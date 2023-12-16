@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+div#container {
+    width: 50vw;
+    margin: 30vh auto;
+    background-color: lightblue;
+    border: 1px dotted blue;
+    padding: 10px;
+}
+input#passwordInput {
+    width: 100%;
+    text-align: center;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
